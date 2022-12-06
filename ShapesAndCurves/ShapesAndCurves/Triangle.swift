@@ -156,18 +156,20 @@ struct IndicatorBackground: View {
 
 struct Indicator: View {
     var body: some View {
-        let textSize: CGFloat = 16
-        let backgroundWidth = textSize * 13.5
-        let backgroundHeight = backgroundWidth
+        let textSize: CGFloat = 26
+//        let backgroundWidth = textSize * 13.5
+//        let backgroundHeight = backgroundWidth
         
-        
-        Text("Open a file to get start")
-            .foregroundColor(.white)
-            .font(.system(size: textSize))
-            .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 34))
-            .background(IndicatorBackground())
-            .frame(maxWidth: 290, maxHeight: 150)
-        
+        VStack{
+            Spacer(minLength: 90)
+            Text("Open a file to get started")
+                .foregroundColor(.white)
+                .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 34))
+                .background(IndicatorBackground())
+                .frame(maxWidth: 320, maxHeight: 150)
+//                .font(.system(size: textSize))
+            //            .dynamicTypeSize(.medium)
+        }
     }
 }
 
